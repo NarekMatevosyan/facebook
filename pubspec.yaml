@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -19,6 +20,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/icons/reels_icon.png
-    - assets/images/icons/person_circle_icon.jpg
-    - assets/images/icons/bell_icon.png
+    - assets/images/icons/person-circle.svg
+    - assets/images/icons/round-bell.svg
+    - assets/images/user_avatar.jpg

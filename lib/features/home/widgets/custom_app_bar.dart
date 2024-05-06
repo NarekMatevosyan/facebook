@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -36,46 +37,46 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Colors.black,
         ),
       ],
-      bottom: const TabBar(
-          labelColor: Color.fromARGB(255, 7, 106, 187),
-          indicatorColor: Color.fromARGB(255, 7, 106, 187),
-          indicatorSize: TabBarIndicatorSize.tab,
-          tabs: [
-            Tab(
+      bottom: TabBar(
+        labelColor: const Color.fromARGB(255, 7, 106, 187),
+        indicatorColor: const Color.fromARGB(255, 7, 106, 187),
+        indicatorSize: TabBarIndicatorSize.tab,
+        tabs: [
+          const Tab(
+            icon: Icon(
+              Icons.home_filled,
+              size: 29.0,
+            ),
+          ),
+          const Tab(
               icon: Icon(
-                Icons.home_filled,
-                size: 29.0,
-              ),
+            Icons.play_circle_outline_outlined,
+          )),
+          const Tab(
+            icon: Icon(
+              Icons.people_outline,
+              size: 29.0,
             ),
-            Tab(
-              icon: Image(
-                height: 23.0,
-                width: 23.0,
-                image: AssetImage('assets/images/icons/reels_icon.png'),
-              ),
+          ),
+          Tab(
+            icon: SvgPicture.asset(
+              'assets/images/icons/person-circle.svg',
+              height: 25.0,
+              width: 25.0,
             ),
-            Tab(
-              icon: Icon(
-                Icons.people_outline,
-                size: 29.0,
-              ),
+          ),
+          Tab(
+            icon: SvgPicture.asset(
+              'assets/images/icons/round-bell.svg',
+              height: 21.0,
+              width: 23.0,
             ),
-            Tab(
-              icon: Image(
-                height: 23.0,
-                width: 23.0,
-                image: AssetImage('assets/images/icons/person_circle_icon.jpg'),
-              ),
-            ),
-            Tab(
-              icon: Image(
-                image: AssetImage('assets/images/icons/bell_icon.png'),
-              ),
-            ),
-            Tab(
-              icon: Icon(Icons.menu),
-            ),
-          ]),
+          ),
+          const Tab(
+            icon: Icon(Icons.menu),
+          ),
+        ],
+      ),
     );
   }
 
