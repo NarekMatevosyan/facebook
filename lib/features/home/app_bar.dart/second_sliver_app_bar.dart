@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+class SecondSliverAppBar extends SliverPersistentHeaderDelegate {
+  @override
+  double get minExtent => 29.0;
 
   @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      title: const Text(
-        'facebook',
-        style: TextStyle(
-          color: Color.fromARGB(255, 7, 106, 187),
-          fontWeight: FontWeight.bold,
-          fontSize: 30.0,
-        ),
-      ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.add_circle),
-          iconSize: 23.0,
-          color: Colors.black,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.search,
-          ),
-          iconSize: 23.0,
-          color: Colors.black,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.chat),
-          iconSize: 23.0,
-          color: Colors.black,
-        ),
-      ],
-      bottom: TabBar(
+  double get maxExtent => 29.0;
+
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: Colors.white,
+      height: 29.0,
+      child: TabBar(
         labelColor: const Color.fromARGB(255, 7, 106, 187),
         indicatorColor: const Color.fromARGB(255, 7, 106, 187),
         indicatorSize: TabBarIndicatorSize.tab,
@@ -81,5 +58,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(81.0);
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return false;
+  }
 }

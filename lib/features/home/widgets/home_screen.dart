@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook/features/home/app_bar.dart/custom_app_bar.dart';
 import 'package:flutter_facebook/features/home/widgets/user_tools.dart';
-
-import 'custom_app_bar.dart';
+import '../app_bar.dart/second_sliver_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 6,
       child: Scaffold(
-        appBar: CustomAppBar(),
-        body: Column(
-          children: [
-            UserTools(),
+        body: CustomScrollView(
+          slivers: [
+            const CustomAppBar(),
+            SliverPersistentHeader(
+              pinned: true,
+              delegate: SecondSliverAppBar(),
+            ),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  const UserTools(),
+                  Container(
+                    height: 4.0,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
