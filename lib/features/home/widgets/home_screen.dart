@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook/features/home/app_bar.dart/custom_app_bar.dart';
+import 'package:flutter_facebook/features/home/widgets/content.dart';
 import 'package:flutter_facebook/features/home/widgets/user_tools.dart';
 import '../app_bar.dart/second_sliver_app_bar.dart';
 
@@ -26,6 +27,7 @@ class HomeScreen extends StatelessWidget {
                     height: 4.0,
                     color: Colors.grey,
                   ),
+                  const Content(),
                 ],
               ),
             ),

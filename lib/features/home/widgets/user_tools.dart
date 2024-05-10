@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_facebook/features/home/models/user_view_model.dart';
 
 class UserTools extends StatelessWidget {
   const UserTools({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final UserViewModel user = UserViewModel(
+      surname: 'number_0',
+      name: 'user',
+      avatar: 'assets/images/user_avatar.jpg',
+    );
     return Padding(
       padding: const EdgeInsets.all(9.0),
       child: Row(
@@ -13,11 +18,11 @@ class UserTools extends StatelessWidget {
           Container(
             height: 40.0,
             width: 40.0,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/user_avatar.jpg'),
+                image: AssetImage(user.avatar),
               ),
             ),
           ),
