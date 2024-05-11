@@ -7,10 +7,12 @@ class UserTools extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final UserViewModel user = UserViewModel(
+      id: 0,
       surname: 'number_0',
       name: 'user',
       avatar: 'assets/images/user_avatar.jpg',
     );
+
     return Padding(
       padding: const EdgeInsets.all(9.0),
       child: Row(

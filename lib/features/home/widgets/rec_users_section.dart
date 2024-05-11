@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook/features/home/models/user_view_model.dart';
+import 'package:flutter_facebook/features/home/widgets/rec_user_contanier.dart';
 import 'package:flutter_facebook/features/home/widgets/user_story.dart';
 
 class RecUsersSection extends StatefulWidget {
@@ -10,43 +11,48 @@ class RecUsersSection extends StatefulWidget {
 }
 
 class _RecUsersSectionState extends State<RecUsersSection> {
+  final List<UserViewModel> recommendedUsers = [
+    UserViewModel(
+      id: 1,
+      surname: 'Number_1',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+    UserViewModel(
+      id: 2,
+      surname: 'Number_2',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+    UserViewModel(
+      id: 3,
+      surname: 'Number_3',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+    UserViewModel(
+      id: 4,
+      surname: 'Number_4',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+    UserViewModel(
+      id: 5,
+      surname: 'Number_5',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+    UserViewModel(
+      id: 6,
+      surname: 'Number_6',
+      name: 'User',
+      avatar: 'assets/images/rec_user_photo.jpg',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final List<UserViewModel> recomandedUsers = [
-      UserViewModel(
-        surname: 'Number_1',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-      UserViewModel(
-        surname: 'Number_2',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-      UserViewModel(
-        surname: 'Number_3',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-      UserViewModel(
-        surname: 'Number_4',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-      UserViewModel(
-        surname: 'Number_5',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-      UserViewModel(
-        surname: 'Number_6',
-        name: 'User',
-        avatar: 'assets/images/rec_user_photo.jpg',
-      ),
-    ];
-
     final double itemHeight = MediaQuery.of(context).size.height / 3.5;
-    final double itemWidth = MediaQuery.of(context).size.width / 4;
 
     return Column(
       children: [
@@ -66,81 +72,15 @@ class _RecUsersSectionState extends State<RecUsersSection> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                      child: Container(
-                        height: itemHeight,
-                        width: itemWidth,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.close,
-                                    size: 17.0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Container(
-                              height: itemHeight / 3,
-                              width: itemWidth / 3 * 2,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey),
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    recomandedUsers[index].avatar,
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Text(
-                              recomandedUsers[index].name,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              recomandedUsers[index].surname,
-                              style: const TextStyle(
-                                  overflow: TextOverflow.ellipsis,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0),
-                            ),
-                            ElevatedButton(
-                                onPressed: () {},
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      Icons.person_add_alt_1_sharp,
-                                      color: Colors.blue,
-                                    ),
-                                    Text(
-                                      overflow: TextOverflow.ellipsis,
-                                      'Доба.',
-                                      style: TextStyle(
-                                          fontSize: 18.0, color: Colors.blue),
-                                    )
-                                  ],
-                                ))
-                          ],
-                        ),
+                      child: RecUserContainer(
+                        name: recommendedUsers[index].name,
+                        surname: recommendedUsers[index].surname,
+                        image: recommendedUsers[index].avatar,
                       ),
                     );
                   },
                   shrinkWrap: true,
-                  itemCount: recomandedUsers.length,
+                  itemCount: recommendedUsers.length,
                   scrollDirection: Axis.horizontal,
                 ),
               ],
