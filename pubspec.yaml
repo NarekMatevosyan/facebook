@@ -24,3 +24,7 @@ flutter:
     - assets/images/icons/round-bell.svg
     - assets/images/user_avatar.jpg
     - assets/images/rec_user_photo.jpg
+    - assets/images/landscape.jpg
+    - assets/images/massif.jpg
+    - assets/images/mountain.jpg
+    - assets/images/thumb_up.jpg

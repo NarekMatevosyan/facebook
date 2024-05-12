@@ -52,7 +52,7 @@ class _RecUsersSectionState extends State<RecUsersSection> {
 
   @override
   Widget build(BuildContext context) {
-    final double itemHeight = MediaQuery.of(context).size.height / 3.5;
+    const double itemHeight = 220.0;
 
     return Column(
       children: [

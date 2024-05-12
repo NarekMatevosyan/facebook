@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_facebook/features/home/models/user_view_model.dart';
 
 class UserStory extends StatelessWidget {
@@ -8,8 +6,8 @@ class UserStory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double itemHeight = MediaQuery.of(context).size.height / 3.5;
-    final double itemWidth = MediaQuery.of(context).size.width / 4;
+    const double itemWidth = 111.0;
+    const double itemHeight = 220.0;
     final UserViewModel user = UserViewModel(
         id: 0,
         surname: 'number_0',
@@ -38,17 +36,17 @@ class UserStory extends StatelessWidget {
                 image: AssetImage(user.avatar),
               ),
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20.0),
-                topRight: Radius.circular(20.0),
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0),
               ),
             ),
           ),
         ),
-        Positioned(
+        const Positioned(
           bottom: itemHeight / 40,
           child: SizedBox(
             width: itemWidth,
-            child: const Text(
+            child: Text(
               textAlign: TextAlign.center,
               'Создать историю',
               style: TextStyle(
@@ -59,11 +57,11 @@ class UserStory extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: itemWidth / 3,
-          bottom: itemHeight / 4.4,
+          right: 37.0,
+          bottom: 51.0,
           child: Container(
-            height: itemHeight / 6,
-            width: itemWidth / 3,
+            height: 40,
+            width: 40,
             decoration: const BoxDecoration(
                 color: Colors.white, shape: BoxShape.circle),
             child: const Icon(

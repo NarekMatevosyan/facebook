@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class SecondSliverAppBar extends SliverPersistentHeaderDelegate {
   @override
-  double get minExtent => 29.0;
+  double get minExtent => 43.0;
 
   @override
-  double get maxExtent => 29.0;
+  double get maxExtent => 43.0;
 
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       color: Colors.white,
-      height: 29.0,
+      height: 43.0,
       child: const TabBar(
         labelColor: Color.fromARGB(255, 7, 106, 187),
         indicatorColor: Color.fromARGB(255, 7, 106, 187),
@@ -21,7 +21,7 @@ class SecondSliverAppBar extends SliverPersistentHeaderDelegate {
           Tab(
             icon: Icon(
               Icons.home_filled,
-              size: 29.0,
+              size: 30.0,
             ),
           ),
           Tab(
@@ -31,15 +31,25 @@ class SecondSliverAppBar extends SliverPersistentHeaderDelegate {
           Tab(
             icon: Icon(
               Icons.people_outline,
-              size: 29.0,
+              size: 30.0,
             ),
           ),
           Tab(
-            icon: Icon(Icons.account_circle_outlined),
+            icon: Icon(
+              Icons.account_circle_outlined,
+              size: 30.0,
+            ),
           ),
-          Tab(icon: Icon(Icons.notifications_none_rounded)),
           Tab(
-            icon: Icon(Icons.menu),
+              icon: Icon(
+            Icons.notifications_none_rounded,
+            size: 30.0,
+          )),
+          Tab(
+            icon: Icon(
+              Icons.menu,
+              size: 30.0,
+            ),
           ),
         ],
       ),
