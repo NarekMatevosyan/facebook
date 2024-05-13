@@ -4,9 +4,10 @@ class UserViewModel {
   final String avatar;
   final int id;
 
-  UserViewModel(
-      {required this.id,
-      required this.surname,
-      required this.name,
-      required this.avatar});
+  UserViewModel({
+    required this.id,
+    required this.surname,
+    required this.name,
+    required this.avatar,
+  });
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_facebook/features/home/widgets/post.dart';
 import 'package:flutter_facebook/features/home/models/post_view_model.dart';
 import 'package:flutter_facebook/features/home/models/user_view_model.dart';
+import 'package:flutter_facebook/features/home/widgets/reels_section.dart';
 
 class HomeScreenContent extends StatelessWidget {
   const HomeScreenContent({super.key});
@@ -17,8 +18,8 @@ class HomeScreenContent extends StatelessWidget {
             postTime: 2,
             poster: UserViewModel(
                 id: 2,
-                surname: 'Number_2',
-                name: 'User',
+                surname: 'Movsisyan',
+                name: 'Hrach',
                 avatar: 'assets/images/rec_user_photo.jpg'),
             likes: 201,
             comments: 13,
@@ -33,8 +34,8 @@ class HomeScreenContent extends StatelessWidget {
             postTime: 4,
             poster: UserViewModel(
                 id: 5,
-                surname: 'Number_5',
-                name: 'User',
+                surname: 'Muradyan',
+                name: 'Artak',
                 avatar: 'assets/images/rec_user_photo.jpg'),
             likes: 217,
             comments: 64,
@@ -49,14 +50,16 @@ class HomeScreenContent extends StatelessWidget {
             postTime: 8,
             poster: UserViewModel(
                 id: 3,
-                surname: 'Number_3',
-                name: 'User',
+                surname: 'Manukyan',
+                name: 'Tigran',
                 avatar: 'assets/images/rec_user_photo.jpg'),
             likes: 8,
             comments: 2,
             shares: 0,
           ),
         ),
+        const SizedBox(height: 4.0),
+        const ReelsSection(),
       ],
     );
   }

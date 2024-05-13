@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_facebook/features/home/app_bar.dart/custom_app_bar.dart';
+import 'package:flutter_facebook/features/home/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter_facebook/features/home/widgets/home_screen_content.dart';
 import 'package:flutter_facebook/features/home/widgets/rec_users_section.dart';
 import 'package:flutter_facebook/features/home/widgets/user_tools.dart';
-import 'app_bar.dart/second_sliver_app_bar.dart';
+import 'widgets/app_bar/second_sliver_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

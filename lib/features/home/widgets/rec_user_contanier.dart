@@ -93,42 +93,45 @@ class _RecUserContainerState extends State<RecUserContainer> {
                         : const Color.fromARGB(255, 156, 208, 250),
                     borderRadius: BorderRadius.circular(4.0),
                   ),
-                  child: SizedBox(
-                    width: 91.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        if (!isSelected)
-                          const Padding(
-                            padding: EdgeInsets.only(left: 3.0),
-                            child: Icon(
-                              Icons.person_add_alt_1,
-                              size: 20.0,
-                              color: Color.fromARGB(255, 7, 106, 187),
-                            ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      if (!isSelected)
+                        const Padding(
+                          padding: EdgeInsets.only(left: 3.0),
+                          child: Icon(
+                            Icons.person_add_alt_1,
+                            size: 20.0,
+                            color: Color.fromARGB(255, 7, 106, 187),
                           ),
-                        const SizedBox(
-                          width: itemWidth / 20,
                         ),
-                        isSelected
-                            ? const Text(
-                                'Отме...',
+                      const SizedBox(
+                        width: itemWidth / 20,
+                      ),
+                      isSelected
+                          ? const SizedBox(
+                              width: 80.0,
+                              child: Text(
+                                overflow: TextOverflow.ellipsis,
+                                'Отменить',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 20.0,
                                 ),
-                                overflow: TextOverflow.ellipsis,
-                              )
-                            : const Text(
-                                'До...',
+                              ),
+                            )
+                          : const SizedBox(
+                              width: 50.0,
+                              child: Text(
+                                'Добавить',
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 7, 106, 187),
                                   fontSize: 20.0,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
-                      ],
-                    ),
+                            ),
+                    ],
                   ),
                 ),
               ),

@@ -9,12 +9,13 @@ class PostViewModel {
   final int comments;
   final int shares;
 
-  PostViewModel(
-      {required this.postTime,
-      required this.description,
-      required this.image,
-      required this.poster,
-      required this.likes,
-      required this.comments,
-      required this.shares});
+  PostViewModel({
+    required this.postTime,
+    required this.description,
+    required this.image,
+    required this.poster,
+    required this.likes,
+    required this.comments,
+    required this.shares,
+  });
 }

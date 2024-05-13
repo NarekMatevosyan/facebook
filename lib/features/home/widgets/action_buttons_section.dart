@@ -6,6 +6,7 @@ class ActionSectionButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -26,17 +27,16 @@ class ActionSectionButtons extends StatelessWidget {
                   child: Icon(
                     Icons.thumb_up_alt_outlined,
                     color: Color.fromARGB(255, 109, 107, 107),
-                    size: 15.0,
+                    size: 20.0,
                   ),
                 ),
                 Text(
                   'Нравиться',
                   style: TextStyle(
-                    fontSize: 15.0,
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 13.0,
                     color: Color.fromARGB(255, 109, 107, 107),
                   ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
@@ -60,13 +60,14 @@ class ActionSectionButtons extends StatelessWidget {
                   child: Icon(
                     Icons.message_outlined,
                     color: Color.fromARGB(255, 109, 107, 107),
-                    size: 15.0,
+                    size: 20.0,
                   ),
                 ),
                 Text(
                   'Комментировать',
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 15.0,
+                    fontSize: 13.0,
                     color: Color.fromARGB(255, 109, 107, 107),
                   ),
                 ),
@@ -92,13 +93,14 @@ class ActionSectionButtons extends StatelessWidget {
                   child: Icon(
                     Icons.send_sharp,
                     color: Color.fromARGB(255, 109, 107, 107),
-                    size: 15.0,
+                    size: 20.0,
                   ),
                 ),
                 Text(
                   'Отправить',
                   style: TextStyle(
-                    fontSize: 15.0,
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 13.0,
                     color: Color.fromARGB(255, 109, 107, 107),
                   ),
                 ),
@@ -124,13 +126,14 @@ class ActionSectionButtons extends StatelessWidget {
                   child: Icon(
                     Icons.share,
                     color: Color.fromARGB(255, 109, 107, 107),
-                    size: 15.0,
+                    size: 20.0,
                   ),
                 ),
                 Text(
                   'Поделиться',
                   style: TextStyle(
-                    fontSize: 15.0,
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 13.0,
                     color: Color.fromARGB(255, 109, 107, 107),
                   ),
                 ),
