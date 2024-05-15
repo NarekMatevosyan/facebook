@@ -60,6 +60,22 @@ class HomeScreenContent extends StatelessWidget {
         ),
         const SizedBox(height: 4.0),
         const ReelsSection(),
+        const SizedBox(height: 4.0),
+        Post(
+          post: PostViewModel(
+            image: 'assets/images/favorite.jpg',
+            description: 'My photo',
+            postTime: 5,
+            poster: UserViewModel(
+                id: 6,
+                surname: 'Hakob',
+                name: 'Araqelyan',
+                avatar: 'assets/images/rec_user_photo.jpg'),
+            likes: 112,
+            comments: 47,
+            shares: 19,
+          ),
+        ),
       ],
     );
   }

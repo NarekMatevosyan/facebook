@@ -43,7 +43,7 @@ class UserStory extends StatelessWidget {
           ),
         ),
         const Positioned(
-          bottom: itemHeight / 40,
+          bottom: 4.0,
           child: SizedBox(
             width: itemWidth,
             child: Text(
@@ -58,16 +58,19 @@ class UserStory extends StatelessWidget {
         ),
         Positioned(
           right: 37.0,
-          bottom: 51.0,
-          child: Container(
-            height: 40,
-            width: 40,
-            decoration: const BoxDecoration(
-                color: Colors.white, shape: BoxShape.circle),
-            child: const Icon(
-              Icons.add_circle_sharp,
-              size: 37.0,
-              color: Color.fromARGB(255, 7, 106, 187),
+          bottom: 57.0,
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: const BoxDecoration(
+                  color: Colors.white, shape: BoxShape.circle),
+              child: const Icon(
+                Icons.add_circle_sharp,
+                size: 37.0,
+                color: Color.fromARGB(255, 7, 106, 187),
+              ),
             ),
           ),
         ),
